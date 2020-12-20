@@ -59,7 +59,6 @@ def add_cookie(request, cookie)
   request
 end
 
-
 def create_item(item_node)
   title_anchor = item_node.css(".thread-list-item__title-link")[0]
   username_anchor = item_node.css(".thread-list-item-meta .thread-header__author")[0]
@@ -80,7 +79,6 @@ def create_item(item_node)
   }
 end
 
-
 def get_reports(token)
   uri = URI.parse("https://bootcamp.fjord.jp/users/#{USER_ID}/reports")
   request = Net::HTTP::Get.new(uri)
@@ -97,7 +95,6 @@ def get_reports(token)
 end
 
 token = fetch_csrf_token
-
 
 if (PASSWORD == "password") && (LOGINNAME == "username")
   puts "LOGINNAMEとPASSWORDを設定してください"
